@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snake Ladder</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="boardAndDiceWrapper">
+      <div class="boardWrapper">
+        <div class="background"></div>
+        <div class="grid-row flex-reverse">
+          <div class="grid dark-pink ninetyone">91</div>
+          <div class="grid light-pink ninetytwo">92</div>
+          <div class="grid dark-pink ninetythree">93</div>
+          <div class="grid light-pink ninetyfour">94</div>
+          <div class="grid dark-pink ninetyfive">95</div>
+          <div class="grid light-pink ninetysix">96</div>
+          <div class="grid dark-pink ninetyseven">97</div>
+          <div class="grid light-pink ninetyeight">98</div>
+          <div class="grid dark-pink ninetynine">99</div>
+          <div class="grid light-pink hundread">100</div>
+        </div>
+
+        <div class="grid-row flex">
+          <div class="grid dark-pink eightyone">81</div>
+          <div class="grid light-pink eightytwo">82</div>
+          <div class="grid dark-pink eightythree">83</div>
+          <div class="grid light-pink eightyfour">84</div>
+          <div class="grid dark-pink eightyfive">85</div>
+          <div class="grid light-pink eightysix">86</div>
+          <div class="grid dark-pink eightyseven">87</div>
+          <div class="grid light-pink eightyeight">88</div>
+          <div class="grid dark-pink eightynine">89</div>
+          <div class="grid light-pink ninety">90</div>
+        </div>
+        <div class="grid-row flex-reverse">
+          <div class="grid dark-pink seventyone">71</div>
+          <div class="grid light-pink seventytwo">72</div>
+          <div class="grid dark-pink seventythree">73</div>
+          <div class="grid light-pink seventyfour">74</div>
+          <div class="grid dark-pink seventyfive">75</div>
+          <div class="grid light-pink seventysix">76</div>
+          <div class="grid dark-pink seventyseven">77</div>
+          <div class="grid light-pink seventyeight">78</div>
+          <div class="grid dark-pink seventynine">79</div>
+          <div class="grid light-pink eighty">80</div>
+        </div>
+        <div class="grid-row flex">
+          <div class="grid dark-pink sixtyone">61</div>
+          <div class="grid light-pink sixtytwo">62</div>
+          <div class="grid dark-pink sixtythree">63</div>
+          <div class="grid light-pink sixtyfour">64</div>
+          <div class="grid dark-pink sixtyfive">65</div>
+          <div class="grid light-pink sixtysix">66</div>
+          <div class="grid dark-pink sixtyseven">67</div>
+          <div class="grid light-pink sixtyeight">68</div>
+          <div class="grid dark-pink sixtynine">69</div>
+          <div class="grid light-pink seventy">70</div>
+        </div>
+        <div class="grid-row flex-reverse">
+          <div class="grid dark-pink fiftyone">51</div>
+          <div class="grid light-pink fiftytwo">52</div>
+          <div class="grid dark-pink fiftythree">53</div>
+          <div class="grid light-pink fiftyfour">54</div>
+          <div class="grid dark-pink fiftyfive">55</div>
+          <div class="grid light-pink fiftysix">56</div>
+          <div class="grid dark-pink fiftyseven">57</div>
+          <div class="grid light-pink fiftyeight">58</div>
+          <div class="grid dark-pink fiftynine">59</div>
+          <div class="grid light-pink sixty">60</div>
+        </div>
+        <div class="grid-row flex">
+          <div class="grid dark-pink fortyone">41</div>
+          <div class="grid light-pink fortytwo">42</div>
+          <div class="grid dark-pink fortythree">43</div>
+          <div class="grid light-pink fortyfour">44</div>
+          <div class="grid dark-pink fortyfive">45</div>
+          <div class="grid light-pink fortysix">46</div>
+          <div class="grid dark-pink fortyseven">47</div>
+          <div class="grid light-pink fortyeight">48</div>
+          <div class="grid dark-pink fortynine">49</div>
+          <div class="grid light-pink fifty">50</div>
+        </div>
+        <div class="grid-row flex-reverse">
+          <div class="grid dark-pink thirtyone">31</div>
+          <div class="grid light-pink thirtytwo">32</div>
+          <div class="grid dark-pink thirtythree">33</div>
+          <div class="grid light-pink thirtyfour">34</div>
+          <div class="grid dark-pink thirtyfive">35</div>
+          <div class="grid light-pink thirtysix">36</div>
+          <div class="grid dark-pink thirtyseven">37</div>
+          <div class="grid light-pink thirtyeight">38</div>
+          <div class="grid dark-pink thirtynine">39</div>
+          <div class="grid light-pink forty">40</div>
+        </div>
+        <div class="grid-row flex">
+          <div class="grid dark-pink twentyone">21</div>
+          <div class="grid light-pink twentytwo">22</div>
+          <div class="grid dark-pink twentythree">23</div>
+          <div class="grid light-pink twentyfour">24</div>
+          <div class="grid dark-pink twentyfive">25</div>
+          <div class="grid light-pink twentysix">26</div>
+          <div class="grid dark-pink twentyseven">27</div>
+          <div class="grid light-pink twentyeight">28</div>
+          <div class="grid dark-pink twentynine">29</div>
+          <div class="grid light-pink thirty">30</div>
+        </div>
+        <div class="grid-row flex-reverse">
+          <div class="grid dark-pink eleven">11</div>
+          <div class="grid light-pink twelve">12</div>
+          <div class="grid dark-pink thirteen">13</div>
+          <div class="grid light-pink fourteen">14</div>
+          <div class="grid dark-pink fifteen">15</div>
+          <div class="grid light-pink sixteen">16</div>
+          <div class="grid dark-pink seventeen">17</div>
+          <div class="grid light-pink eighteen">18</div>
+          <div class="grid dark-pink nineteen">19</div>
+          <div class="grid light-pink twenty">20</div>
+        </div>
+        <div class="grid-row flex">
+          <div class="grid dark-pink one">1</div>
+          <div class="grid light-pink two">2</div>
+          <div class="grid dark-pink three">3</div>
+          <div class="grid light-pink four">4</div>
+          <div class="grid dark-pink five">5</div>
+          <div class="grid light-pink six">6</div>
+          <div class="grid dark-pink seven">7</div>
+          <div class="grid light-pink eight">8</div>
+          <div class="grid dark-pink nine">9</div>
+          <div class="grid light-pink ten">10</div>
+        </div>
+      </div>
+      <div class="lower-container">
+        <div class="game-rules">
+          <code>
+            <h3># Game Rules</span></h3>
+            <p class="list">1. Player must get 6 on die roll to take entry to board.</p>
+            <p class="list">2. On getting 6 for first time player enter board and gets an additional chance to roll the die.</p>
+        </code>
+        </div>
+        <div class="inside-wrapper">
+          <div class="playerName red"></div>
+          <div class="playerWrapper">
+            <div id="home-p1" class="playerOne">
+              <img src="./img/playerOne-01.svg" alt="">
+            </div>
+            <div id="home-p2" class="playerTwo">
+              <img src="./img/playerTwo-01.svg" alt="">
+            </div>
+          </div>
+          <div class="dice-container">
+            <div class="dice-wrapper">
+              <img id="dice" src="./img/dice-01.svg">
+            </div>
+            <button onclick="roll()">ROLL THE DICE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="overlay hide">
+    <div class="winner">
+      <p id="winnerName">Player 1 Wins</p>
+      <div class="reloadicon">
+        <img src="./img/reload.svg" alt="">
+        <p id="playAgain">Play Again</p>
+      </div>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>

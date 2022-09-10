@@ -1,0 +1,477 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+
+:root {
+  --blue: #2face2;
+  --light-blue: #92d7f8;
+  --dark-blue: #2294d2;
+  --red: #de2427;
+  --light-red: #e7605d;
+  --dark-red: #b32026;
+  --background-wood: #c9822d;
+  --dark-pink: #dea3a2;
+  --light-pink: #f8e7e8;
+}
+.red {
+  color: var(--red);
+}
+
+.blue {
+  color: #2face2;
+}
+
+.dark-pink {
+  background-color: var(--dark-pink);
+}
+
+.light-pink {
+  background-color: var(--light-pink);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.dice-container {
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+  font-family: "Poppins", sans-serif;
+}
+
+#dice {
+  height: 50px;
+  width: 50px;
+}
+
+.list {
+  font-size: 0.8rem;
+}
+
+.lower-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inside-wrapper {
+  padding: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 15px 25px rgba(50, 50, 50, 0.15);
+  border-radius: 8px;
+}
+
+.dice-wrapper {
+  /* width: 90%; */
+  display: flex;
+  justify-content: space-around;
+}
+
+p {
+  font-size: 16px;
+  margin: 30px 0;
+  font-weight: 500;
+}
+
+button {
+  background-color: #e92e3d;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  padding: 15px 0;
+  width: 150px;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.shake {
+  animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(8deg);
+  }
+
+  50% {
+    transform: rotate(-8deg);
+  }
+
+  100% {
+    transform: rotate(8deg);
+  }
+}
+
+.boardAndDiceWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.playerName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  width: 100%;
+  font-family: "Bangers", cursive;
+  font-size: 2rem;
+  /* color: var(--dark-red) */
+}
+
+.boardWrapper {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  font-family: "Bangers", cursive;
+  font-size: 1.5rem;
+  padding: 1px;
+  /* background-color: gray; */
+  border: 8px solid #383633;
+  border-radius: 6px;
+  position: relative;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url(./img/gameboard.svg);
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+
+.boardWrapper .grid-row .grid {
+  position: relative;
+  padding: 10px 10px;
+  height: 4rem;
+  width: 4rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: top;
+  color: balck;
+  border: 2px solid;
+  border-color: #f5f3eb #bab7a9 #bab7a9 #ffe8db;
+}
+
+.tag {
+  position: absolute;
+  font-size: 0.7rem;
+  bottom: 0;
+  left: 0;
+  margin: 5px;
+  letter-spacing: 2px;
+}
+
+.flex-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.flex {
+  display: flex;
+}
+
+.dark-purple {
+  background-color: var(--dark-purple);
+}
+
+.player-turn {
+  animation: glowing 1000ms infinite;
+}
+
+.playerWrapper {
+  /* border: 1px solid black; */
+  position: relative;
+  height: 50px;
+  width: 100px;
+  
+}
+
+.playerOne {
+  position: absolute;
+  width: 22px;
+  z-index: 3;
+  left: 0;
+  bottom: 0;
+  background: transparent;
+}
+
+.playerTwo {
+  position: absolute;
+  width: 22px;
+  z-index: 3;
+  left: 30px;
+  bottom: 0;
+  background: transparent;
+}
+
+.diceWrapper {
+  border: 1px solid black;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.visible-hidden {
+  visibility: hidden;
+}
+
+.diceWrapper .dice {
+  cursor: pointer;
+  font-family: "Bangers", cursive;
+  height: 2rem;
+  width: 2rem;
+  background-color: var(--red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+.scroll-down-arrow {
+  margin-top: -20px;
+  position: absolute;
+  left: 33%;
+  -webkit-animation: bounce 1000ms ease infinite;
+  -moz-animation: bounce 1000ms ease infinite;
+  -o-animation: bounce 1000ms ease infinite;
+  animation: bounce 1000ms ease infinite;
+  -webkit-animation-timing-function: cubic-bezier(.14, .75, .2, 1.01);
+  -moz-animation-timing-function: cubic-bezier(.14, .75, .2, 1.01);
+  -ms-animation-timing-function: cubic-bezier(.14, .75, .2, 1.01);
+  animation-timing-function: cubic-bezier(.14, .75, .2, 1.01);
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 8px solid #f2f2f2;
+  content: "";
+  background-color: transparent;
+}
+
+.button.scroll:before {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  box-shadow: 0px 0px 3px white, inset 0px 0px 3px white;
+  padding: 2px;
+  z-index: -1;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: block;
+  content: "";
+  -webkit-animation: ring 1s alternate 0s infinite;
+  -moz-animation: ring 1s alternate 0s infinite;
+  -o-animation: ring 1s linear 0s infinite;
+  animation: ring 1s linear 0s infinite;
+}
+
+@-webkit-keyframes bounce {
+
+  0%,
+  100% {
+    top: 9px;
+    opacity: 0.5
+  }
+
+  25% {
+    top: 12px;
+    opacity: 1
+  }
+
+  50% {
+    opacity: 0.8
+  }
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    top: 9px;
+    opacity: 0.5
+  }
+
+  25% {
+    top: 12px;
+    opacity: 1
+  }
+
+  50% {
+    opacity: 0.8
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  background-color: rgba(0, 0, 0, .75);
+}
+
+.winner {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 2rem;
+  font-family: "Bangers", cursive;
+  width: 320px;
+  height: 180px;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  background-color: var(--dark-red);
+  font-size: 3rem;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.reloadicon {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.reloadicon:hover {
+  color: rgb(225, 225, 225);
+}
+
+.hide {
+  display: none;
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 -10px #ffffff;
+  }
+
+  40% {
+    box-shadow: 0 0 20px #ffffff;
+  }
+
+  60% {
+    box-shadow: 0 0 20px #ffffff;
+  }
+
+  100% {
+    box-shadow: 0 0 -10px #ffffff;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .boardWrapper .grid-row .grid {
+    padding-top: 4px;
+    padding-right: 4px;
+    height: 2rem;
+    width: 2rem;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: end;
+    align-items: top;
+  }
+
+  .boardWrapper {
+    padding: 0;
+  }
+
+  .boardAndDiceWrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+  .boardWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .playerOne {
+    position: absolute;
+    width: 12px;
+    z-index: 3;
+    left: 0;
+    bottom: 0;
+  }
+
+  .playerTwo {
+    position: absolute;
+    width: 12px;
+    z-index: 3;
+    left: 15px;
+    bottom: 0;
+  }
+
+  .playerName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    font-family: "Bangers", cursive;
+    font-size: 2.5rem;
+  }
+
+  .scroll-down-arrow {
+    margin-top: -20px;
+    left: 0;
+  }
+
+  .button.scroll:before {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {}
+
+/* Medium devices (tablets less than 992px) */
+@media (max-width: 991.98px) {}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {}
